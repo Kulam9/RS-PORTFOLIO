@@ -1,0 +1,19 @@
+@use 'functions' as *;
+
+$font-base: 'Epilogue-VariableFont_wght', sans-serif;
+
+$color-primary: #ef6d58;
+
+$bg-light: #fdf0e9;
+$bg-dark: #28293e;
+
+$color-text-light: #fff;
+$color-text-light-gray: #b2b2ba;
+$color-text-dark: #391400;
+$color-text-dark-gray: #806354;
+
+$border-color: #F3D1BF;
+
+$gutter: 20px;
+
+$breakpoints: (sm: rem(768), md: rem(992), lg: rem(1200));

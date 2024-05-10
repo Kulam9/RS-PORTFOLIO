@@ -1,0 +1,56 @@
+@use '../variables' as *;
+@use '../functions' as *;
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(15) rem(35);
+    border: none;
+    border-radius: rem(6);
+    font-size: rem(14);
+    font-weight: 900;
+    font-family: inherit;
+    line-height: normal;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color .3s ease, opacity .3s ease;
+    white-space: nowrap;
+
+
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+}
+
+.button--outline {
+    color: $color-text-light;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    background-color: transparent;
+
+    &:hover,
+    &:active {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+}
+
+.button--primary {
+    color: $color-text-light;
+    background-color: $color-primary;
+
+    &:hover,
+    &:active {
+        background-color: darken($color-primary, 5%);
+    }
+}
+
+.button--white {
+    background-color: #fff;
+    color: $color-text-dark;
+
+    &:hover,
+    &:active {
+        opacity: .7;
+    }
+}

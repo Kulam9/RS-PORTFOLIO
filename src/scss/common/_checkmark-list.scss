@@ -1,0 +1,42 @@
+@use '../variables' as *;
+@use '../maxins' as *;
+@use '../functions' as *;
+
+$checkmark-list-icon-size: rem(32);
+
+.checkmark-list {
+    @include list-reset;
+}
+
+.checkmark-list__item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: rem(16);
+
+    &::before {
+        content: '';
+        width: $checkmark-list-icon-size;
+        height: $checkmark-list-icon-size;
+        background-color: $color-primary;
+        border-radius: 50%;
+    }
+
+    &::after {
+        content: '';
+        width: calc($checkmark-list-icon-size / 2);
+        height: calc($checkmark-list-icon-size / 2);
+        position: absolute;
+        top: calc($checkmark-list-icon-size / 2);
+        left: calc($checkmark-list-icon-size / 2);
+        transform: translate(-50%, -50%);
+        background-image: url('../../assets/images/sprite.svg#icon-check');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: rem(16);
+    }
+}

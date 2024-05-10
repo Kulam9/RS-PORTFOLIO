@@ -1,0 +1,13 @@
+@use '../../maxins' as *;
+@use '../../variables' as *;
+@use '../../functions' as *;
+
+.accordion-list {
+    @include list-reset;
+    border-radius: rem(6);
+    border: 1px solid #3A3C56;
+}
+
+.accordion-list__item:not(:last-child) {
+    border-bottom: 1px solid #3A3C56;
+}
